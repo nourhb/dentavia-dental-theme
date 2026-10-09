@@ -1,0 +1,194 @@
+/*
+Theme Name: Dentavia
+Theme URI: https://github.com/Nourhb/dentavia-dental-theme
+Author: Nour El Houda Bouajila
+Author URI: https://nour-el-houda-bouajila.rf.gd/
+Description: Dentavia is a fresh, modern Full Site Editing theme crafted for dental clinics. Clean white and teal design with soft rounded corners, a prominent Book Appointment call-to-action, treatments grid, smile gallery, team profiles, pricing tables, opening hours and FAQ patterns — everything a modern dental practice needs to welcome new patients online.
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.9
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: dentavia
+Tags: full-site-editing, block-patterns, block-styles, dental, clinic, medical, health, custom-colors, custom-logo, featured-images, threaded-comments, translation-ready, wide-blocks, editor-style
+*/
+
+/* ---------- Base polish ---------- */
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-underline-offset: 3px;
+}
+
+/* ---------- Reveal on scroll ---------- */
+
+.dentavia-reveal {
+	opacity: 0;
+	transform: translateY(24px);
+	transition: opacity .7s ease, transform .7s ease;
+}
+
+.dentavia-reveal.is-visible {
+	opacity: 1;
+	transform: none;
+}
+
+/* ---------- Cards ---------- */
+
+.is-style-dentavia-card {
+	border-radius: 18px;
+	overflow: hidden;
+	box-shadow: 0 18px 44px -18px rgba(13, 148, 136, .22);
+}
+
+.is-style-dentavia-card .wp-block-image img {
+	border-radius: 18px 18px 0 0;
+}
+
+/* ---------- Buttons ---------- */
+
+.is-style-teal-outline .wp-block-button__link {
+	background: transparent;
+	color: #0d9488;
+	border: 2px solid #0d9488;
+}
+
+.is-style-teal-outline .wp-block-button__link:hover {
+	background: #0d9488;
+	color: #fff;
+}
+
+/* ---------- Images ---------- */
+
+.is-style-soft-frame img {
+	border-radius: 18px;
+	box-shadow: 0 16px 40px -12px rgba(13, 148, 136, .18);
+}
+
+/* ---------- Headings ---------- */
+
+.is-style-teal-rule {
+	position: relative;
+	padding-bottom: .75rem;
+}
+
+.is-style-teal-rule::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 64px;
+	height: 3px;
+	background: #0d9488;
+	border-radius: 2px;
+}
+
+/* ---------- Badges ---------- */
+
+.dentavia-badge {
+	display: inline-block;
+	padding: .35rem .9rem;
+	border-radius: 999px;
+	font-size: .72rem;
+	font-weight: 700;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+}
+
+.dentavia-badge--teal { background: #0d9488; color: #fff; }
+.dentavia-badge--mint { background: #99f6e4; color: #134e4a; }
+.dentavia-badge--open { background: #dcfce7; color: #166534; }
+
+/* ---------- Back to top ---------- */
+
+.dentavia-to-top {
+	position: fixed;
+	right: 1.25rem;
+	bottom: 1.25rem;
+	width: 46px;
+	height: 46px;
+	border: none;
+	border-radius: 50%;
+	background: #0d9488;
+	color: #fff;
+	font-size: 1.25rem;
+	line-height: 1;
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(10px);
+	transition: opacity .3s ease, transform .3s ease, visibility .3s;
+	box-shadow: 0 12px 28px -8px rgba(13, 148, 136, .5);
+	z-index: 60;
+}
+
+.dentavia-to-top.is-visible {
+	opacity: 1;
+	visibility: visible;
+	transform: none;
+}
+
+.dentavia-to-top:hover {
+	background: #0f766e;
+}
+
+/* ---------- Booking form ---------- */
+
+.dentavia-booking-form input,
+.dentavia-booking-form select,
+.dentavia-booking-form textarea {
+	width: 100%;
+	padding: .8rem 1rem;
+	border: 1.5px solid #d7e3e1;
+	border-radius: 12px;
+	font: inherit;
+	background: #fff;
+	color: #1e293b;
+}
+
+.dentavia-booking-form input:focus,
+.dentavia-booking-form select:focus,
+.dentavia-booking-form textarea:focus {
+	outline: 2px solid #0d9488;
+	outline-offset: 1px;
+	border-color: #0d9488;
+}
+
+.dentavia-booking-form label {
+	display: block;
+	font-size: .85rem;
+	font-weight: 600;
+	margin-bottom: .35rem;
+	color: #134e4a;
+}
+
+/* ---------- Responsive tweaks ---------- */
+
+@media (max-width: 640px) {
+	.dentavia-to-top {
+		right: .9rem;
+		bottom: .9rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.dentavia-reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+}
